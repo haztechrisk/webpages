@@ -1,5 +1,5 @@
 # webpages
-Location of HaztechRisk.Org webpages.
+Location of the HaztechRisk.Org webpages.
 
 These pages are maintained by
 Martin A. Wortman, Ph.D., Ph.D.
