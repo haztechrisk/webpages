@@ -65,12 +65,19 @@
 
   /* Faded background image, confined to the header/hero band */
   .hero {
-    position: relative;
-    overflow: hidden;
     border-bottom: 1px solid var(--hairline);
   }
 
-  .hero::before {
+  .hero-inner {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 32px;
+  }
+
+  .hero-inner::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -78,7 +85,7 @@
     background: url("assets/refinery.jpg") center 65% / cover no-repeat;
   }
 
-  .hero::after {
+  .hero-inner::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -87,12 +94,9 @@
     opacity: calc(1 - var(--bg-image-opacity));
   }
 
-  .hero-inner {
+  .hero-inner > * {
     position: relative;
     z-index: 1;
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 40px 24px 32px;
   }
 
   .wrap {
