@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HazTechRisk.Org</title>
+<meta name="description" content="Independent research on hazardous technology risk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f5f2;
+    --surface: #ffffff;
+    --text: #1b1e1f;
+    --text-muted: #61666a;
+    --hairline: #dcdad4;
+    --accent: #8a3a15;
+    --accent-contrast: #fff8f3;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16181a;
+      --surface: #1d2022;
+      --text: #ecebe7;
+      --text-muted: #9a9f9f;
+      --hairline: #34383a;
+      --accent: #e08a52;
+      --accent-contrast: #201007;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #16181a;
+    --surface: #1d2022;
+    --text: #ecebe7;
+    --text-muted: #9a9f9f;
+    --hairline: #34383a;
+    --accent: #e08a52;
+    --accent-contrast: #201007;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  main {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 18px;
+  }
+
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(2.1rem, 6vw, 2.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+
+  p.tagline {
+    font-size: 1.02rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    max-width: 38ch;
+    margin: 0 0 40px;
+  }
+
+  ul.links {
+    list-style: none;
+    margin: 0 0 48px;
+    padding: 0;
+    border-top: 1px solid var(--hairline);
+  }
+
+  ul.links li {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  ul.links a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 2px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  ul.links a .label {
+    transition: color 0.15s ease;
+  }
+
+  ul.links a .arrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    transition: transform 0.15s ease, color 0.15s ease;
+    flex: none;
+  }
+
+  ul.links a:hover .label,
+  ul.links a:focus-visible .label {
+    color: var(--accent);
+  }
+
+  ul.links a:hover .arrow,
+  ul.links a:focus-visible .arrow {
+    color: var(--accent);
+    transform: translateX(3px);
+  }
+
+  ul.links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  footer {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ul.links a .label, ul.links a .arrow { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">HazTechRisk.Org</p>
+  <h1>Hazardous technology risk, explained plainly.</h1>
+  <p class="tagline">Independent research on public policy, safety, and the efficacy of safety-critical protections.</p>
+
+  <ul class="links">
+    <li>
+      <a href="https://beyondharm.substack.com">
+        <span class="label">Beyond Harm — Substack</span>
+        <span class="arrow">&#8594;</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://haztechrisk.github.io/haztechrisk">
+        <span class="label">Publications Repository</span>
+        <span class="arrow">&#8594;</span>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:info@haztechrisk.org">
+        <span class="label">info@haztechrisk.org</span>
+        <span class="arrow">&#8594;</span>
+      </a>
+    </li>
+  </ul>
+
+  <footer>The Organization for Public Awareness of Hazardous Technology Risks</footer>
+</main>
+</body>
+</html>
