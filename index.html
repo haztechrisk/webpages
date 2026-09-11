@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HazTechRisk.Org</title>
 <meta name="description" content="Independent research on hazardous technology risk.">
+<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,6 +21,7 @@
     --accent: #5f7a52;
     --accent-contrast: #f5f8f2;
     --bg-image-opacity: 0.16;
+    color-scheme: light;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -34,12 +36,13 @@
       --accent: #8fae7d;
       --accent-contrast: #10150f;
       --bg-image-opacity: 0.22;
+      color-scheme: dark;
     }
   }
 
   :root[data-theme="dark"] {
     --bg: #14171a;
-    --bg-secondary: #171b19;
+    --bg-secondary: #121513;
     --surface: #1b1f22;
     --text: #e9ebe7;
     --text-muted: #9aa09b;
@@ -48,6 +51,7 @@
     --accent: #8fae7d;
     --accent-contrast: #10150f;
     --bg-image-opacity: 0.22;
+    color-scheme: dark;
   }
 
   * { box-sizing: border-box; }
