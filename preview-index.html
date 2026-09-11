@@ -11,6 +11,7 @@
 <style>
   :root {
     --bg: #f5f6f4;
+    --bg-secondary: #f0f2eb;
     --surface: #ffffff;
     --text: #1c2024;
     --text-muted: #5c6266;
@@ -24,6 +25,7 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #14171a;
+      --bg-secondary: #171b19;
       --surface: #1b1f22;
       --text: #e9ebe7;
       --text-muted: #9aa09b;
@@ -37,6 +39,7 @@
 
   :root[data-theme="dark"] {
     --bg: #14171a;
+    --bg-secondary: #171b19;
     --surface: #1b1f22;
     --text: #e9ebe7;
     --text-muted: #9aa09b;
@@ -51,7 +54,7 @@
 
   html, body {
     margin: 0;
-    background: var(--bg);
+    background: var(--bg-secondary);
     color: var(--text);
   }
 
