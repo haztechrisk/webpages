@@ -60,32 +60,42 @@
     font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
   }
 
-  /* Faded background image — swap the url() below for the client-supplied image */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background:
-      linear-gradient(var(--bg), var(--bg)),
-      url("assets/symmetry.jpg") center / cover no-repeat fixed;
-    background-blend-mode: normal;
-    opacity: 1;
+  /* Faded background image, confined to the header/hero band — swap the url() below for the client-supplied image */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--hairline);
   }
 
-  body::after {
+  .hero::before {
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 0;
+    background: url("assets/symmetry.jpg") center 25% / cover no-repeat;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     background: var(--bg);
     opacity: calc(1 - var(--bg-image-opacity));
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 32px;
   }
 
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 40px 24px 52px;
+    padding: 0 24px 52px;
   }
 
   header.masthead {
@@ -109,7 +119,6 @@
     border-bottom: 1px solid var(--hairline);
   }
 
-  section:first-of-type { padding-top: 0; }
   section:last-of-type { border-bottom: none; }
 
   h1 {
@@ -294,16 +303,18 @@
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <header class="masthead">
+      <img src="assets/logo.png" alt="HazTechRisk.Org">
+    </header>
 
-  <header class="masthead">
-    <img src="assets/logo.png" alt="HazTechRisk.Org">
-  </header>
-
-  <section>
     <h1>The Organization for Public Awareness of Hazardous Technology Risk</h1>
     <p class="tagline">Independent research on regulatory policy, safety, environmental health, and the efficacy of safety-critical protections.</p>
-  </section>
+  </div>
+</div>
+
+<div class="wrap">
 
   <section>
     <ul class="links">
